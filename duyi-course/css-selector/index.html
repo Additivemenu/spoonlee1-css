@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 选择器演示</title>
+    <style>
+      body {
+        font-family: "Microsoft YaHei", sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f8f9fa;
+      }
+
+      h1 {
+        text-align: center;
+        color: #2c3e50;
+        margin-bottom: 40px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #3498db;
+      }
+
+      .demo-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .demo-card {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: calc(50% - 10px);
+        box-sizing: border-box;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      @media (max-width: 768px) {
+        .demo-card {
+          width: 100%;
+        }
+      }
+
+      .demo-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .demo-card h2 {
+        color: #3498db;
+        margin-top: 0;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #eee;
+      }
+
+      .demo-card p {
+        color: #666;
+        margin-bottom: 20px;
+      }
+
+      .demo-link {
+        display: inline-block;
+        background-color: #3498db;
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+      }
+
+      .demo-link:hover {
+        background-color: #2980b9;
+      }
+
+      footer {
+        margin-top: 40px;
+        text-align: center;
+        font-size: 0.9em;
+        color: #7f8c8d;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS 选择器演示</h1>
+
+    <div class="demo-container">
+      <div class="demo-card">
+        <h2>伪类与组合选择器</h2>
+        <p>
+          本演示展示了CSS伪类选择器（如:hover、:checked等）与组合选择器的使用，包括下拉菜单、选项卡切换、图片库效果等8个实际案例。
+        </p>
+        <a
+          href="pseudo-class-and-composite-selector/demo1/index.html"
+          class="demo-link"
+          >查看演示</a
+        >
+      </div>
+
+      <div class="demo-card">
+        <h2>伪元素选择器</h2>
+        <p>
+          本演示展示了CSS伪元素选择器（如::before、::after、::first-line等）的使用，包括装饰元素、引用样式、动态链接效果等多个实际案例。
+        </p>
+        <a href="pseudo-element-selector/demo1/index.html" class="demo-link"
+          >查看演示</a
+        >
+      </div>
+    </div>
+
+    <footer>
+      <p>CSS选择器学习演示项目 &copy; 2023</p>
+    </footer>
+  </body>
+</html>
